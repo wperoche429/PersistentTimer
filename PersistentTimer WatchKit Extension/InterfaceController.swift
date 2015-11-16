@@ -26,18 +26,15 @@ class InterfaceController: WKInterfaceController {
         for min in 0...59 {
             let pickerItem = WKPickerItem()
             pickerItem.title = String(min)
-            pickerItem.caption = "minute"
             minItems.append(pickerItem)
         }        
         minutePicker.setItems(minItems)
         minutePicker.setSelectedItemIndex((timer?.minute)!)
         
         var secItems: [WKPickerItem] = []
-        
         for sec in 0...59 {
             let pickerItem = WKPickerItem()
             pickerItem.title = String(sec)
-            pickerItem.caption = "second"
             secItems.append(pickerItem)
         }
         secondPicker.setItems(secItems)
