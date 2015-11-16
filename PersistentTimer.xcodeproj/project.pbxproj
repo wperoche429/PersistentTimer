@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2294401B1BF9BE960027243E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294401A1BF9BE960027243E /* AppDelegate.swift */; };
+		2294401D1BF9BE960027243E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294401C1BF9BE960027243E /* ViewController.swift */; };
+		229440201BF9BE960027243E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2294401E1BF9BE960027243E /* Main.storyboard */; };
+		229440221BF9BE960027243E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229440211BF9BE960027243E /* Assets.xcassets */; };
+		229440251BF9BE960027243E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229440231BF9BE960027243E /* LaunchScreen.storyboard */; };
+		229440301BF9BE960027243E /* PersistentTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294402F1BF9BE960027243E /* PersistentTimerTests.swift */; };
+		2294403B1BF9BE960027243E /* PersistentTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294403A1BF9BE960027243E /* PersistentTimerUITests.swift */; };
+		229440401BF9BE960027243E /* PersistentTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2294403F1BF9BE960027243E /* PersistentTimer WatchKit App.app */; };
+		229440461BF9BE960027243E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229440441BF9BE960027243E /* Interface.storyboard */; };
+		229440481BF9BE960027243E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229440471BF9BE960027243E /* Assets.xcassets */; };
+		2294404F1BF9BE960027243E /* PersistentTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2294404E1BF9BE960027243E /* PersistentTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		229440541BF9BE960027243E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229440531BF9BE960027243E /* InterfaceController.swift */; };
+		229440561BF9BE960027243E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229440551BF9BE960027243E /* ExtensionDelegate.swift */; };
+		229440581BF9BE960027243E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229440571BF9BE960027243E /* ComplicationController.swift */; };
+		2294405A1BF9BE960027243E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229440591BF9BE960027243E /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2294402C1BF9BE960027243E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2294400F1BF9BE960027243E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 229440161BF9BE960027243E;
+			remoteInfo = PersistentTimer;
+		};
+		229440371BF9BE960027243E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2294400F1BF9BE960027243E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 229440161BF9BE960027243E;
+			remoteInfo = PersistentTimer;
+		};
+		229440411BF9BE960027243E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2294400F1BF9BE960027243E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2294403E1BF9BE960027243E;
+			remoteInfo = "PersistentTimer WatchKit App";
+		};
+		229440501BF9BE960027243E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2294400F1BF9BE960027243E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2294404D1BF9BE960027243E;
+			remoteInfo = "PersistentTimer WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		229440611BF9BE960027243E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2294404F1BF9BE960027243E /* PersistentTimer WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229440651BF9BE960027243E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				229440401BF9BE960027243E /* PersistentTimer WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		229440171BF9BE960027243E /* PersistentTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistentTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2294401A1BF9BE960027243E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2294401C1BF9BE960027243E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2294401F1BF9BE960027243E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		229440211BF9BE960027243E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		229440241BF9BE960027243E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		229440261BF9BE960027243E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2294402B1BF9BE960027243E /* PersistentTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistentTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2294402F1BF9BE960027243E /* PersistentTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentTimerTests.swift; sourceTree = "<group>"; };
+		229440311BF9BE960027243E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		229440361BF9BE960027243E /* PersistentTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistentTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2294403A1BF9BE960027243E /* PersistentTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentTimerUITests.swift; sourceTree = "<group>"; };
+		2294403C1BF9BE960027243E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2294403F1BF9BE960027243E /* PersistentTimer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PersistentTimer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		229440451BF9BE960027243E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		229440471BF9BE960027243E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		229440491BF9BE960027243E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2294404E1BF9BE960027243E /* PersistentTimer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PersistentTimer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		229440531BF9BE960027243E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		229440551BF9BE960027243E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		229440571BF9BE960027243E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		229440591BF9BE960027243E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2294405B1BF9BE960027243E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		229440141BF9BE960027243E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229440281BF9BE960027243E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229440331BF9BE960027243E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2294404B1BF9BE960027243E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2294400E1BF9BE960027243E = {
+			isa = PBXGroup;
+			children = (
+				229440191BF9BE960027243E /* PersistentTimer */,
+				2294402E1BF9BE960027243E /* PersistentTimerTests */,
+				229440391BF9BE960027243E /* PersistentTimerUITests */,
+				229440431BF9BE960027243E /* PersistentTimer WatchKit App */,
+				229440521BF9BE960027243E /* PersistentTimer WatchKit Extension */,
+				229440181BF9BE960027243E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		229440181BF9BE960027243E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				229440171BF9BE960027243E /* PersistentTimer.app */,
+				2294402B1BF9BE960027243E /* PersistentTimerTests.xctest */,
+				229440361BF9BE960027243E /* PersistentTimerUITests.xctest */,
+				2294403F1BF9BE960027243E /* PersistentTimer WatchKit App.app */,
+				2294404E1BF9BE960027243E /* PersistentTimer WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		229440191BF9BE960027243E /* PersistentTimer */ = {
+			isa = PBXGroup;
+			children = (
+				2294401A1BF9BE960027243E /* AppDelegate.swift */,
+				2294401C1BF9BE960027243E /* ViewController.swift */,
+				2294401E1BF9BE960027243E /* Main.storyboard */,
+				229440211BF9BE960027243E /* Assets.xcassets */,
+				229440231BF9BE960027243E /* LaunchScreen.storyboard */,
+				229440261BF9BE960027243E /* Info.plist */,
+			);
+			path = PersistentTimer;
+			sourceTree = "<group>";
+		};
+		2294402E1BF9BE960027243E /* PersistentTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				2294402F1BF9BE960027243E /* PersistentTimerTests.swift */,
+				229440311BF9BE960027243E /* Info.plist */,
+			);
+			path = PersistentTimerTests;
+			sourceTree = "<group>";
+		};
+		229440391BF9BE960027243E /* PersistentTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2294403A1BF9BE960027243E /* PersistentTimerUITests.swift */,
+				2294403C1BF9BE960027243E /* Info.plist */,
+			);
+			path = PersistentTimerUITests;
+			sourceTree = "<group>";
+		};
+		229440431BF9BE960027243E /* PersistentTimer WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				229440441BF9BE960027243E /* Interface.storyboard */,
+				229440471BF9BE960027243E /* Assets.xcassets */,
+				229440491BF9BE960027243E /* Info.plist */,
+			);
+			path = "PersistentTimer WatchKit App";
+			sourceTree = "<group>";
+		};
+		229440521BF9BE960027243E /* PersistentTimer WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				229440531BF9BE960027243E /* InterfaceController.swift */,
+				229440551BF9BE960027243E /* ExtensionDelegate.swift */,
+				229440571BF9BE960027243E /* ComplicationController.swift */,
+				229440591BF9BE960027243E /* Assets.xcassets */,
+				2294405B1BF9BE960027243E /* Info.plist */,
+			);
+			path = "PersistentTimer WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		229440161BF9BE960027243E /* PersistentTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 229440661BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer" */;
+			buildPhases = (
+				229440131BF9BE960027243E /* Sources */,
+				229440141BF9BE960027243E /* Frameworks */,
+				229440151BF9BE960027243E /* Resources */,
+				229440651BF9BE960027243E /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				229440421BF9BE960027243E /* PBXTargetDependency */,
+			);
+			name = PersistentTimer;
+			productName = PersistentTimer;
+			productReference = 229440171BF9BE960027243E /* PersistentTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2294402A1BF9BE960027243E /* PersistentTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 229440691BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimerTests" */;
+			buildPhases = (
+				229440271BF9BE960027243E /* Sources */,
+				229440281BF9BE960027243E /* Frameworks */,
+				229440291BF9BE960027243E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2294402D1BF9BE960027243E /* PBXTargetDependency */,
+			);
+			name = PersistentTimerTests;
+			productName = PersistentTimerTests;
+			productReference = 2294402B1BF9BE960027243E /* PersistentTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		229440351BF9BE960027243E /* PersistentTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2294406C1BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimerUITests" */;
+			buildPhases = (
+				229440321BF9BE960027243E /* Sources */,
+				229440331BF9BE960027243E /* Frameworks */,
+				229440341BF9BE960027243E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				229440381BF9BE960027243E /* PBXTargetDependency */,
+			);
+			name = PersistentTimerUITests;
+			productName = PersistentTimerUITests;
+			productReference = 229440361BF9BE960027243E /* PersistentTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		2294403E1BF9BE960027243E /* PersistentTimer WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 229440621BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer WatchKit App" */;
+			buildPhases = (
+				2294403D1BF9BE960027243E /* Resources */,
+				229440611BF9BE960027243E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				229440511BF9BE960027243E /* PBXTargetDependency */,
+			);
+			name = "PersistentTimer WatchKit App";
+			productName = "PersistentTimer WatchKit App";
+			productReference = 2294403F1BF9BE960027243E /* PersistentTimer WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2294404D1BF9BE960027243E /* PersistentTimer WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2294405E1BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer WatchKit Extension" */;
+			buildPhases = (
+				2294404A1BF9BE960027243E /* Sources */,
+				2294404B1BF9BE960027243E /* Frameworks */,
+				2294404C1BF9BE960027243E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PersistentTimer WatchKit Extension";
+			productName = "PersistentTimer WatchKit Extension";
+			productReference = 2294404E1BF9BE960027243E /* PersistentTimer WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2294400F1BF9BE960027243E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "William Peroche";
+				TargetAttributes = {
+					229440161BF9BE960027243E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					2294402A1BF9BE960027243E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 229440161BF9BE960027243E;
+					};
+					229440351BF9BE960027243E = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 229440161BF9BE960027243E;
+					};
+					2294403E1BF9BE960027243E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					2294404D1BF9BE960027243E = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 229440121BF9BE960027243E /* Build configuration list for PBXProject "PersistentTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2294400E1BF9BE960027243E;
+			productRefGroup = 229440181BF9BE960027243E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				229440161BF9BE960027243E /* PersistentTimer */,
+				2294402A1BF9BE960027243E /* PersistentTimerTests */,
+				229440351BF9BE960027243E /* PersistentTimerUITests */,
+				2294403E1BF9BE960027243E /* PersistentTimer WatchKit App */,
+				2294404D1BF9BE960027243E /* PersistentTimer WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		229440151BF9BE960027243E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229440251BF9BE960027243E /* LaunchScreen.storyboard in Resources */,
+				229440221BF9BE960027243E /* Assets.xcassets in Resources */,
+				229440201BF9BE960027243E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229440291BF9BE960027243E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229440341BF9BE960027243E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2294403D1BF9BE960027243E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229440481BF9BE960027243E /* Assets.xcassets in Resources */,
+				229440461BF9BE960027243E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2294404C1BF9BE960027243E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2294405A1BF9BE960027243E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		229440131BF9BE960027243E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2294401D1BF9BE960027243E /* ViewController.swift in Sources */,
+				2294401B1BF9BE960027243E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229440271BF9BE960027243E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229440301BF9BE960027243E /* PersistentTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		229440321BF9BE960027243E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2294403B1BF9BE960027243E /* PersistentTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2294404A1BF9BE960027243E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229440561BF9BE960027243E /* ExtensionDelegate.swift in Sources */,
+				229440541BF9BE960027243E /* InterfaceController.swift in Sources */,
+				229440581BF9BE960027243E /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2294402D1BF9BE960027243E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 229440161BF9BE960027243E /* PersistentTimer */;
+			targetProxy = 2294402C1BF9BE960027243E /* PBXContainerItemProxy */;
+		};
+		229440381BF9BE960027243E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 229440161BF9BE960027243E /* PersistentTimer */;
+			targetProxy = 229440371BF9BE960027243E /* PBXContainerItemProxy */;
+		};
+		229440421BF9BE960027243E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2294403E1BF9BE960027243E /* PersistentTimer WatchKit App */;
+			targetProxy = 229440411BF9BE960027243E /* PBXContainerItemProxy */;
+		};
+		229440511BF9BE960027243E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2294404D1BF9BE960027243E /* PersistentTimer WatchKit Extension */;
+			targetProxy = 229440501BF9BE960027243E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2294401E1BF9BE960027243E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2294401F1BF9BE960027243E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		229440231BF9BE960027243E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				229440241BF9BE960027243E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		229440441BF9BE960027243E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				229440451BF9BE960027243E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2294405C1BF9BE960027243E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2294405D1BF9BE960027243E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2294405F1BF9BE960027243E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "PersistentTimer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		229440601BF9BE960027243E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "PersistentTimer WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		229440631BF9BE960027243E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = PersistentTimer_WatchKit_Extension;
+				INFOPLIST_FILE = "PersistentTimer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		229440641BF9BE960027243E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = PersistentTimer_WatchKit_Extension;
+				INFOPLIST_FILE = "PersistentTimer WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		229440671BF9BE960027243E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PersistentTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		229440681BF9BE960027243E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PersistentTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2294406A1BF9BE960027243E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PersistentTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersistentTimer.app/PersistentTimer";
+			};
+			name = Debug;
+		};
+		2294406B1BF9BE960027243E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PersistentTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersistentTimer.app/PersistentTimer";
+			};
+			name = Release;
+		};
+		2294406D1BF9BE960027243E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PersistentTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PersistentTimer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2294406E1BF9BE960027243E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PersistentTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nz.co.PersistentTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PersistentTimer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		229440121BF9BE960027243E /* Build configuration list for PBXProject "PersistentTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2294405C1BF9BE960027243E /* Debug */,
+				2294405D1BF9BE960027243E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2294405E1BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2294405F1BF9BE960027243E /* Debug */,
+				229440601BF9BE960027243E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		229440621BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				229440631BF9BE960027243E /* Debug */,
+				229440641BF9BE960027243E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		229440661BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				229440671BF9BE960027243E /* Debug */,
+				229440681BF9BE960027243E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		229440691BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2294406A1BF9BE960027243E /* Debug */,
+				2294406B1BF9BE960027243E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2294406C1BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2294406D1BF9BE960027243E /* Debug */,
+				2294406E1BF9BE960027243E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2294400F1BF9BE960027243E /* Project object */;
+}
