@@ -22,6 +22,9 @@
 		229440561BF9BE960027243E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229440551BF9BE960027243E /* ExtensionDelegate.swift */; };
 		229440581BF9BE960027243E /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229440571BF9BE960027243E /* ComplicationController.swift */; };
 		2294405A1BF9BE960027243E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229440591BF9BE960027243E /* Assets.xcassets */; };
+		229440701BF9BF340027243E /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2294406F1BF9BF340027243E /* Timer.swift */; };
+		229440721BF9BF730027243E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229440711BF9BF730027243E /* TimerManager.swift */; };
+		229440741BF9CA670027243E /* CountdownInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229440731BF9CA670027243E /* CountdownInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,9 @@
 		229440571BF9BE960027243E /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		229440591BF9BE960027243E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2294405B1BF9BE960027243E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2294406F1BF9BF340027243E /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		229440711BF9BF730027243E /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		229440731BF9CA670027243E /* CountdownInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +213,9 @@
 			isa = PBXGroup;
 			children = (
 				229440531BF9BE960027243E /* InterfaceController.swift */,
+				229440731BF9CA670027243E /* CountdownInterfaceController.swift */,
+				2294406F1BF9BF340027243E /* Timer.swift */,
+				229440711BF9BF730027243E /* TimerManager.swift */,
 				229440551BF9BE960027243E /* ExtensionDelegate.swift */,
 				229440571BF9BE960027243E /* ComplicationController.swift */,
 				229440591BF9BE960027243E /* Assets.xcassets */,
@@ -433,8 +442,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				229440561BF9BE960027243E /* ExtensionDelegate.swift in Sources */,
+				229440721BF9BF730027243E /* TimerManager.swift in Sources */,
 				229440541BF9BE960027243E /* InterfaceController.swift in Sources */,
 				229440581BF9BE960027243E /* ComplicationController.swift in Sources */,
+				229440701BF9BF340027243E /* Timer.swift in Sources */,
+				229440741BF9CA670027243E /* CountdownInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +735,7 @@
 				229440601BF9BE960027243E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		229440621BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -731,6 +744,7 @@
 				229440641BF9BE960027243E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		229440661BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimer" */ = {
 			isa = XCConfigurationList;
@@ -739,6 +753,7 @@
 				229440681BF9BE960027243E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		229440691BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -747,6 +762,7 @@
 				2294406B1BF9BE960027243E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2294406C1BF9BE960027243E /* Build configuration list for PBXNativeTarget "PersistentTimerUITests" */ = {
 			isa = XCConfigurationList;
@@ -755,6 +771,7 @@
 				2294406E1BF9BE960027243E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
