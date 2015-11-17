@@ -23,22 +23,23 @@ class InterfaceController: WKInterfaceController {
         timer = TimerManager.sharedInstance.currentTimer
 
         var minItems: [WKPickerItem] = []
+        var secItems: [WKPickerItem] = []
         for min in 0...59 {
             let pickerItem = WKPickerItem()
             pickerItem.title = String(min)
             minItems.append(pickerItem)
+            for sec in 0...59 {
+                let pickerItem = WKPickerItem()
+                pickerItem.title = String(sec)
+                secItems.append(pickerItem)
+            }
         }        
         minutePicker.setItems(minItems)
         minutePicker.setSelectedItemIndex((timer?.minute)!)
         
-        var secItems: [WKPickerItem] = []
-        for sec in 0...59 {
-            let pickerItem = WKPickerItem()
-            pickerItem.title = String(sec)
-            secItems.append(pickerItem)
-        }
+        let secIndex = ((timer?.minute)! * 60) + (timer?.second)!
         secondPicker.setItems(secItems)
-        secondPicker.setSelectedItemIndex((timer?.second)!)
+        secondPicker.setSelectedItemIndex(secIndex)
 
     }
 
@@ -59,7 +60,10 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func secondChanged(value: Int) {
-        timer?.second = value
+        
+        timer?.second = value % 60
+        timer?.minute = value / 60
+        minutePicker.setSelectedItemIndex((timer?.minute)!)
 
         
     }
