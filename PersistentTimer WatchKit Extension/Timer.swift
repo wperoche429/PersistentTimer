@@ -145,6 +145,7 @@ class Timer: NSObject {
         remainingTotalTime = getTimerValue()
         save()
         startTimer()
+        TimerManager.reloadComplications()
     }
     
     func stop() {
@@ -153,6 +154,7 @@ class Timer: NSObject {
         totalPauseTime = 0
         save()
         stopTimer()
+        TimerManager.reloadComplications()
     }
     
     func pause() {
