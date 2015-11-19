@@ -45,7 +45,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
                 if let _ = timer {
                     //Do nothing
                 } else {
-                    timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadComplications"), userInfo: nil, repeats: true)
+                    timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("reloadComplications"), userInfo: nil, repeats: true)
                 }
                 template.textProvider = CLKSimpleTextProvider(text: currentTimer.timeInString)
 

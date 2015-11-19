@@ -219,7 +219,7 @@ class Timer: NSObject {
     
     private func startTimer() {
         stopTimer()
-        scheduledTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+        scheduledTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
     }
     
     private func stopTimer() {
