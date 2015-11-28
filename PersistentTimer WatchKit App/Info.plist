@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>nz.co.PersistentTimer</string>
+	<string>nz.co.persistenttimer</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

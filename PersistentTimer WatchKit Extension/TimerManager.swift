@@ -21,6 +21,8 @@ class TimerManager {
             self.currentTimer?.repeating = true
             addTimer(self.currentTimer!)
         }
+        
+        TimerManager.reloadComplications()
     }
     
     func addTimer(time : Timer) {
