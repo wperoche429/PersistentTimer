@@ -76,6 +76,34 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 //            entries.append(entry)
 //        }
 //        handler(entries)
+//        
+//        
+//        let currentTimer = TimerManager.sharedInstance.currentTimer!
+//        var timerValue = -1
+//        if let _ = currentTimer.timeStarted {
+//            timerValue = currentTimer.remainingTotalTime
+//        }
+//        var entries: [CLKComplicationTimelineEntry] = []
+//        var nextDate = NSDate()
+//        for var counter in 0..<limit {
+//            nextDate = NSDate(timeInterval: 1, sinceDate: nextDate)
+//            let template = CLKComplicationTemplateUtilitarianSmallFlat()
+//            if (timerValue == -1) {
+//                template.textProvider = CLKSimpleTextProvider(text: "Set")
+//            } else {
+//                template.textProvider = CLKSimpleTextProvider(text: TimerManager.timerInString(timerValue))
+//                timerValue--
+//                if timerValue < 0 {
+//                    timerValue = currentTimer.getTimerValue()
+//                }
+//            }
+//            
+//            let entry = CLKComplicationTimelineEntry(date: nextDate, complicationTemplate: template)
+//            entries.append(entry)
+//        }
+//        handler(entries)
+
+        
         handler(nil)
         
     }
