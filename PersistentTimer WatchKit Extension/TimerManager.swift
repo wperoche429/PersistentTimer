@@ -27,6 +27,7 @@ class TimerManager {
     
     func addTimer(time : Timer) {
         NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(time), forKey: "saveTimers")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     class func reloadComplications() {

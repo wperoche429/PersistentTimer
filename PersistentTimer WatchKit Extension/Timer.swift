@@ -42,6 +42,11 @@ class Timer: NSObject {
             if let _ = timeStarted {
                 timeValue = remainingTotalTime
             }
+            if (remainingTotalTime == 0 && timeStarted != nil) {
+                
+                WKInterfaceDevice.currentDevice().playHaptic(.Notification)
+                
+            }
             return timerInString(timeValue)
         }
     }
@@ -128,13 +133,8 @@ class Timer: NSObject {
             myDelegate.timeUpdate(self.timeInString)
         }
         
-        if (remainingTotalTime == 0 && timeStarted != nil) {
-            
-            WKInterfaceDevice.currentDevice().playHaptic(.Notification)
-            
-        }
         
-        TimerManager.reloadComplications()
+        
         
     }
     
