@@ -45,6 +45,7 @@ class Timer: NSObject {
             if (remainingTotalTime == 0 && timeStarted != nil) {
                 
                 WKInterfaceDevice.currentDevice().playHaptic(.Notification)
+                NSLog("Play haptic")
                 
             }
             return TimerManager.timerInString(timeValue)
@@ -160,6 +161,7 @@ class Timer: NSObject {
     func pause() {
         timePause = NSDate()
         save()
+        TimerManager.reloadComplications()
     }
     
     func resume() {
@@ -167,6 +169,7 @@ class Timer: NSObject {
         totalPauseTime += pauseTime
         timePause = nil
         save()
+        TimerManager.reloadComplications()
     }
     
     func getTimerValue() -> Int {
@@ -210,7 +213,7 @@ class Timer: NSObject {
     
     private func startTimer() {
         stopTimer()
-        scheduledTimer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
+        scheduledTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
     }
     
     private func stopTimer() {

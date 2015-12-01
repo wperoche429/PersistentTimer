@@ -8,7 +8,7 @@
         <!--InterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PersistentTimer_WatchKit_App" customModuleProvider="target">
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PersistentTimer_WatchKit_Extension">
                     <items>
                         <group width="1" height="17" alignment="left" id="gts-0P-HHO">
                             <items>

@@ -35,7 +35,6 @@ class TimerManager {
             if complications.count > 0 {
                 for complication in complications {
                     CLKComplicationServer.sharedInstance().reloadTimelineForComplication(complication)
-                    NSLog("Reloading complication \(complication.description)...")
                 }
                 
             }

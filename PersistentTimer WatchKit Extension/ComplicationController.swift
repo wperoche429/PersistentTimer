@@ -11,14 +11,6 @@ import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
-    override init() {
-        super.init()
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadComplication"), userInfo: nil, repeats: true)
-    }
-    
-    func reloadComplication() {
-        TimerManager.reloadComplications()
-    }
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
@@ -43,14 +35,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         if complication.family == .UtilitarianSmall {
             let template = CLKComplicationTemplateUtilitarianSmallFlat()
             let currentTimer = TimerManager.sharedInstance.currentTimer!
+            var message = "T: OFF"
             if let _ = currentTimer.timeStarted {
-                template.textProvider = CLKSimpleTextProvider(text: currentTimer.timeInString)
-
-            } else {
-                template.textProvider = CLKSimpleTextProvider(text: "Set")
+                message = "T: ON"
+                if let _ = currentTimer.timePause {
+                    message = "T: PAUSE"
+                }
 
             }
             
+            template.textProvider = CLKSimpleTextProvider(text: message)
             let entry = CLKComplicationTimelineEntry(date: NSDate(),
                 complicationTemplate: template)
             
@@ -66,44 +60,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         // Call the handler with the timeline entries after to the given date
-//        var entries: [CLKComplicationTimelineEntry] = []
-//        var nextDate = NSDate()
-//        for var counter in 0..<limit {
-//            nextDate = NSDate(timeInterval: 1, sinceDate: nextDate)
-//            let template = CLKComplicationTemplateUtilitarianSmallFlat()
-//            template.textProvider = CLKSimpleTextProvider(text: "Updated" + String(counter))
-//            let entry = CLKComplicationTimelineEntry(date: nextDate, complicationTemplate: template)
-//            entries.append(entry)
-//        }
-//        handler(entries)
-//        
-//        
-//        let currentTimer = TimerManager.sharedInstance.currentTimer!
-//        var timerValue = -1
-//        if let _ = currentTimer.timeStarted {
-//            timerValue = currentTimer.remainingTotalTime
-//        }
-//        var entries: [CLKComplicationTimelineEntry] = []
-//        var nextDate = NSDate()
-//        for var counter in 0..<limit {
-//            nextDate = NSDate(timeInterval: 1, sinceDate: nextDate)
-//            let template = CLKComplicationTemplateUtilitarianSmallFlat()
-//            if (timerValue == -1) {
-//                template.textProvider = CLKSimpleTextProvider(text: "Set")
-//            } else {
-//                template.textProvider = CLKSimpleTextProvider(text: TimerManager.timerInString(timerValue))
-//                timerValue--
-//                if timerValue < 0 {
-//                    timerValue = currentTimer.getTimerValue()
-//                }
-//            }
-//            
-//            let entry = CLKComplicationTimelineEntry(date: nextDate, complicationTemplate: template)
-//            entries.append(entry)
-//        }
-//        handler(entries)
 
-        
         handler(nil)
         
     }
