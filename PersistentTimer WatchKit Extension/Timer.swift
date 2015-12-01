@@ -42,7 +42,12 @@ class Timer: NSObject {
             if let _ = timeStarted {
                 timeValue = remainingTotalTime
             }
-            return timerInString(timeValue)
+            if (remainingTotalTime == 0 && timeStarted != nil) {
+                
+                WKInterfaceDevice.currentDevice().playHaptic(.Notification)
+                
+            }
+            return TimerManager.timerInString(timeValue)
         }
     }
     private var myDelegates : [TimerDelegate] = []
@@ -95,7 +100,7 @@ class Timer: NSObject {
             if !repeating {
                 stop()
                 for myDelegate in myDelegates {
-                    myDelegate.timeUpdate(timerInString(getTimerValue()))
+                    myDelegate.timeUpdate(TimerManager.timerInString(getTimerValue()))
                 }
                 return
             }
@@ -125,14 +130,9 @@ class Timer: NSObject {
         }
         
         for myDelegate in myDelegates {
-            myDelegate.timeUpdate(timerInString(remainingTotalTime))
+            myDelegate.timeUpdate(self.timeInString)
         }
         
-        if (remainingTotalTime == 0 && timeStarted != nil) {
-            
-            WKInterfaceDevice.currentDevice().playHaptic(.Notification)
-            
-        }
         
         
         
@@ -178,16 +178,7 @@ class Timer: NSObject {
         return timerValue
     }
     
-    func timerInString(value : Int) -> String {
-        let uHour : Int = value / 3600
-        let minLeft : Int = value / 60
-        let uMin : Int = minLeft % 60
-        let uSec : Int = value % 60
-        
-        let text = String(format: "%02d", uMin) + ":" + String(format: "%02d", uSec)
-        
-        return text
-    }
+    
     
     func subscribe(delegate : TimerDelegate) {
         var found = false

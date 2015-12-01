@@ -11,8 +11,14 @@ import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
-    var timer : NSTimer?
-
+    override init() {
+        super.init()
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("reloadComplication"), userInfo: nil, repeats: true)
+    }
+    
+    func reloadComplication() {
+        TimerManager.reloadComplications()
+    }
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
@@ -31,29 +37,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         handler(.ShowOnLockScreen)
     }
     
-    // MARK: - Timeline Population
-    func reloadComplications() {
-        TimerManager.reloadComplications()
-    }
-    
+    // MARK: - Timeline Population    
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
         // Call the handler with the current timeline entry
         if complication.family == .UtilitarianSmall {
             let template = CLKComplicationTemplateUtilitarianSmallFlat()
             let currentTimer = TimerManager.sharedInstance.currentTimer!
             if let _ = currentTimer.timeStarted {
-                if let _ = timer {
-                    //Do nothing
-                } else {
-                    timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: Selector("reloadComplications"), userInfo: nil, repeats: true)
-                }
                 template.textProvider = CLKSimpleTextProvider(text: currentTimer.timeInString)
 
             } else {
-                if let _ = timer {
-                    timer!.invalidate()
-                    timer = nil
-                }
                 template.textProvider = CLKSimpleTextProvider(text: "Set")
 
             }
@@ -73,7 +66,46 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         // Call the handler with the timeline entries after to the given date
+//        var entries: [CLKComplicationTimelineEntry] = []
+//        var nextDate = NSDate()
+//        for var counter in 0..<limit {
+//            nextDate = NSDate(timeInterval: 1, sinceDate: nextDate)
+//            let template = CLKComplicationTemplateUtilitarianSmallFlat()
+//            template.textProvider = CLKSimpleTextProvider(text: "Updated" + String(counter))
+//            let entry = CLKComplicationTimelineEntry(date: nextDate, complicationTemplate: template)
+//            entries.append(entry)
+//        }
+//        handler(entries)
+//        
+//        
+//        let currentTimer = TimerManager.sharedInstance.currentTimer!
+//        var timerValue = -1
+//        if let _ = currentTimer.timeStarted {
+//            timerValue = currentTimer.remainingTotalTime
+//        }
+//        var entries: [CLKComplicationTimelineEntry] = []
+//        var nextDate = NSDate()
+//        for var counter in 0..<limit {
+//            nextDate = NSDate(timeInterval: 1, sinceDate: nextDate)
+//            let template = CLKComplicationTemplateUtilitarianSmallFlat()
+//            if (timerValue == -1) {
+//                template.textProvider = CLKSimpleTextProvider(text: "Set")
+//            } else {
+//                template.textProvider = CLKSimpleTextProvider(text: TimerManager.timerInString(timerValue))
+//                timerValue--
+//                if timerValue < 0 {
+//                    timerValue = currentTimer.getTimerValue()
+//                }
+//            }
+//            
+//            let entry = CLKComplicationTimelineEntry(date: nextDate, complicationTemplate: template)
+//            entries.append(entry)
+//        }
+//        handler(entries)
+
+        
         handler(nil)
+        
     }
     
     // MARK: - Update Scheduling

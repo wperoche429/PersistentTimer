@@ -27,6 +27,7 @@ class TimerManager {
     
     func addTimer(time : Timer) {
         NSUserDefaults.standardUserDefaults().setObject(NSKeyedArchiver.archivedDataWithRootObject(time), forKey: "saveTimers")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     class func reloadComplications() {
@@ -39,6 +40,17 @@ class TimerManager {
                 
             }
         }
+    }
+    
+    class func timerInString(value : Int) -> String {
+        let uHour : Int = value / 3600
+        let minLeft : Int = value / 60
+        let uMin : Int = minLeft % 60
+        let uSec : Int = value % 60
+        
+        let text = String(format: "%02d", uMin) + ":" + String(format: "%02d", uSec)
+        
+        return text
     }
     
 }

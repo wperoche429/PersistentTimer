@@ -19,7 +19,7 @@ class CountdownInterfaceController: WKInterfaceController, TimerDelegate {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         timer = TimerManager.sharedInstance.currentTimer
-        self.timerLabel.setText(timer?.timeInString)
+        self.timerLabel.setText("")
         if let _ = timer?.timePause {
             self.pauseButton.setTitle("Resume")
         } else {
