@@ -125,7 +125,7 @@ class Timer: NSObject {
         }
         
         for myDelegate in myDelegates {
-            myDelegate.timeUpdate(timerInString(remainingTotalTime))
+            myDelegate.timeUpdate(self.timeInString)
         }
         
         if (remainingTotalTime == 0 && timeStarted != nil) {
@@ -134,7 +134,7 @@ class Timer: NSObject {
             
         }
         
-        
+        TimerManager.reloadComplications()
         
     }
     

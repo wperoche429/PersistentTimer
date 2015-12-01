@@ -328,6 +328,7 @@
 				TargetAttributes = {
 					229440161BF9BE960027243E = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = UYX934M6RW;
 					};
 					2294402A1BF9BE960027243E = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -339,9 +340,11 @@
 					};
 					2294403E1BF9BE960027243E = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = UYX934M6RW;
 					};
 					2294404D1BF9BE960027243E = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = UYX934M6RW;
 					};
 				};
 			};
@@ -588,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "PersistentTimer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nz.co.persistenttimer.watchkitapp.watchkitextension;
@@ -603,6 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "PersistentTimer WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nz.co.persistenttimer.watchkitapp.watchkitextension;
@@ -618,6 +623,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = PersistentTimer_WatchKit_Extension;
 				INFOPLIST_FILE = "PersistentTimer WatchKit App/Info.plist";
@@ -634,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = PersistentTimer_WatchKit_Extension;
 				INFOPLIST_FILE = "PersistentTimer WatchKit App/Info.plist";
@@ -650,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PersistentTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nz.co.persistenttimer;
@@ -661,6 +669,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PersistentTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nz.co.persistenttimer;
