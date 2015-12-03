@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
     
     func createNotification(timer : Int, startDate : NSDate) {
-        for var i in 1...64 {
+        for  i in 1...64 {
             let localNotif = UILocalNotification()
             localNotif.fireDate = startDate.dateByAddingTimeInterval((Double)(timer * i))
             localNotif.alertTitle = "Cycle ends"

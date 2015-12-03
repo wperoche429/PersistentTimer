@@ -42,7 +42,6 @@ class TimerManager {
     }
     
     class func timerInString(value : Int) -> String {
-        let uHour : Int = value / 3600
         let minLeft : Int = value / 60
         let uMin : Int = minLeft % 60
         let uSec : Int = value % 60
