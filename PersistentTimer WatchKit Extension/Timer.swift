@@ -6,17 +6,16 @@
 //  Copyright © 2015 William Peroche. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 import Foundation
 import WatchKit
+import WatchConnectivity
 
 protocol TimerDelegate : class {
     func timeUpdate(timeInString : String)
 }
 
-class Timer: NSObject {
+class Timer: NSObject, WKExtensionDelegate {
     
     var hour : Int = 0
     var minute : Int = 0 {
@@ -147,6 +146,9 @@ class Timer: NSObject {
         save()
         startTimer()
         TimerManager.reloadComplications()
+        
+        let dict = NSDictionary(objects: [NSNumber(integer: remainingTotalTime), timeStarted!], forKeys: ["count", "startDate"])
+        updatePhone(["timer": dict])
     }
     
     func stop() {
@@ -156,6 +158,7 @@ class Timer: NSObject {
         save()
         stopTimer()
         TimerManager.reloadComplications()
+        updatePhone(["cancelNotification": "cancel"])
     }
     
     func pause() {
@@ -220,6 +223,22 @@ class Timer: NSObject {
         if let _ = scheduledTimer {
             scheduledTimer?.invalidate()
             scheduledTimer = nil
+        }
+    }
+    
+    private func updatePhone(context: [String : AnyObject]) {
+        if WCSession.isSupported() {
+            
+            if (WCSession.defaultSession().reachable) {
+                print("reachable")
+                
+                WCSession.defaultSession().sendMessage(context, replyHandler: { (respond) -> Void in
+                    
+                    }, errorHandler: { (error) -> Void in
+                        
+                })
+            }
+            
         }
     }
     

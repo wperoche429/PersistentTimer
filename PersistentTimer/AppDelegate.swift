@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert, categories: nil))
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        setupWatchConnectivity()
         return true
     }
 
@@ -39,6 +43,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+    }
+    
+    private func setupWatchConnectivity() {
+        // 1
+        if WCSession.isSupported() {
+            // 2
+            let session = WCSession.defaultSession()
+            // 3
+            session.delegate = self
+            // 4
+            session.activateSession()
+        }
+    }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        print("receive")
+        if let _ = applicationContext["cancelNotification"] as? String {
+          UIApplication.sharedApplication().cancelAllLocalNotifications()
+        }
+        
+        if let timer = applicationContext["timer"] as? NSDictionary {
+            let timerCount = timer.objectForKey("count") as! NSNumber
+            let startDate = timer.objectForKey("startDate") as! NSDate
+            createNotification(timerCount.integerValue, startDate: startDate)
+            
+        }
+        
+    }
+    
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        print("receive message")
+        if let _ = message["cancelNotification"] as? String {
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+        }
+        
+        if let timer = message["timer"] as? NSDictionary {
+            let timerCount = timer.objectForKey("count") as! NSNumber
+            let startDate = timer.objectForKey("startDate") as! NSDate
+            createNotification(timerCount.integerValue, startDate: startDate)
+            
+        }
+    }
+    
+    func createNotification(timer : Int, startDate : NSDate) {
+        for var i in 1...64 {
+            let localNotif = UILocalNotification()
+            localNotif.fireDate = startDate.dateByAddingTimeInterval((Double)(timer * i))
+            localNotif.alertTitle = "Cycle ends"
+            localNotif.alertBody = "Cycle ends"
+            localNotif.soundName = UILocalNotificationDefaultSoundName;
+            
+            UIApplication.sharedApplication().scheduleLocalNotification(localNotif)
+            
+        }
+        
     }
 
 
